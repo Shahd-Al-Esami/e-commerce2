@@ -83,4 +83,5 @@ delete users
 
 
 # Api Endpoints:
-- postman collection : e-commerce-api 
+- postman collection : e-commerce-api
+- https://api.postman.com/collections/36486745-d9decce1-4de6-4a64-924b-8533362097e0?access_key=PMAT-01JB9J5D2BNJN1MHGWX14GYGKY
