@@ -1,18 +1,28 @@
-**E-Commerce project**
+**E-Commerce Managment System**
 
-# Overview
+# Description
 This is a comprehensive E-Commerce application that provides an admin dashboard for managing products, categories, customer orders, and users. The application allows admins to add, edit, and delete products and categories, manage customer orders, and display  sales .
 Customers can view products by category, place orders, and manage their orders through the API.
 
 # Features
 - ui auth 
 - auth sanctum
-- php crud operation 
+- php crud operation
+- Form Requests Validation is handled by custom form request classes.
 - soft delete & force delete & restore products
 - pagination 
 - middleware 
 - Trait 
 - seeder
+
+### Technologies Used:
+- **Laravel 10**
+- **PHP**
+- **MySQL**
+- **XAMPP** (for local development environment)
+- **Composer** (PHP dependency manager)
+- **Postman Collection**: Contains all API requests for easy testing and interaction with the API.
+
 # Admin Dashboard
 - Product Management
 Add new products with details (title, price, description, images, etc.)
@@ -55,19 +65,18 @@ delete users
 
 
 
-# Requirements
-- laravel 10
-- xampp 
-- postman
+
 
 
 # Installation
-Clone the repository by commend :git clone  https://github.com/Shahd-Al-Esami/e-commerce.git 
-Xampp start  with appach and mysql
-Create a database and ensure the connection is configured in the .env file.
-run commends : composer install & npm install
-run commends : php artisan serv & npm run dev & php artisan db:seed 
-Use Postman to test the API endpoints and perform actions such as placing an order, etc.
+### Steps to Run the Project
+
+1. Clone the repository by commend :git clone  https://github.com/Shahd-Al-Esami/e-commerce.git 
+2. Xampp start  with appach and mysql
+2. Create a database and ensure the connection is configured in the .env file.
+3. run commends : composer install & npm install
+4. run commends : php artisan serv & npm run dev & php artisan db:seed 
+5. Use Postman to test the API endpoints and perform actions such as placing an order, etc.
  Import the collection named e-commerce-api into Postman.
 
 
