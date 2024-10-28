@@ -80,39 +80,9 @@
         </div>
     </div>
 
-    {{-- <div id="order-summary">
-        <h3>Order Summary</h3>
-        <div id="order-items"></div>
-    </div>
-</div> --}}
+    
 
 
-{{-- <div id="order-summary">
-    <div id="order-items"></div>
-    <div class="total-price" id="total-price">Total Price: </div><p>${{ $product->price * $product->quantity }} </p>
-</div>
-</div> --}}
-{{-- <script>
-    function orderProduct(productId) {
-        const quantity = prompt('Enter the number of this product you want:');
-        if (quantity && !isNaN(quantity) && quantity > 0) {
-            const orderItemsDiv = document.getElementById('order-items');
-            const productDiv = document.createElement('div');
-            productDiv.className = 'order-item';
-
-            productDiv.innerHTML = `Product ${productId}: Quantity ${quantity}
-                                    <button class="delete-btn" onclick="removeItem(this)">×</button>`;
-            orderItemsDiv.appendChild(productDiv);
-        } else {
-            alert('Please enter a valid number greater than 0');
-        }
-    }
-
-    function removeItem(button) {
-        const orderItem = button.parentElement;
-        orderItem.remove();
-    }
-</script> --}}
 
 </body>
 </html>

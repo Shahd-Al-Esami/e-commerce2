@@ -30,13 +30,7 @@
                 <textarea   id="amount" name="amount" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">{{ $product->amount }}</textarea>
             </div>
             category:
-            {{-- <select name="category_ids[]" multiple class="form-select" aria-label="Select category ">
-                @foreach ($categories as $category)
-                <option value="{{ $category->id }}" {{ ( $product->category && $product->category->id == $category->id) ? 'selected' : '' }}>
-                    {{ $category->name }}
-                    </option>
-                @endforeach
-            </select> --}}
+           
 
             @foreach($categories as $category)
                <div>
@@ -47,7 +41,7 @@
                </div>
                @endforeach
 
-           
+
 
 
 

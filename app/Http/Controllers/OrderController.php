@@ -18,7 +18,6 @@ class OrderController extends Controller
   {  $products=Product::withTrashed()->get();
 
        $orders=Order::all();
-        // $orders = Order::with('product')->get();
         return view('order.index',['orders'=>$orders,'products'=>$products]);
 
     }

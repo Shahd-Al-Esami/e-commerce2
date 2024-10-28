@@ -21,7 +21,7 @@
 
     <img class="card-img-top" style="height: 150px; object-fit: cover;" src="{{ asset('/' . $order->product->path) }}" alt="Post Image" /> <!-- Improved image styling -->
     <div class="card-body">
-        <h5 class="card-title">title: {{ $order->product->title }}</h5> <!-- Removed 'title :' for cleaner look -->
+        <h5 class="card-title">title: {{ $order->product->title }}</h5> 
         <h6 class="card-subtitle mb-2 text-muted">description :{{ $order->product->description }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">price :{{ $order->price }}</h6>
         <h6 class="card-subtitle mb-2 text-muted">quantity :{{ $order->quantity }}</h6>

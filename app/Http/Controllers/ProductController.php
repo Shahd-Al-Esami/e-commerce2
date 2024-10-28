@@ -21,10 +21,8 @@ class ProductController extends Controller
         if($search){
             $categoryIds = Category::where('name', 'LIKE', '%' . $search . '%')->pluck('id');
 
-            // الحصول على المنتجات المرتبطة بتلك الفئات
-            $categoryProducts = Category_Product::whereIn('category_id', $categoryIds)->pluck('product_id'); // استخدام pluck للحصول على معرفات المنتجات
+            $categoryProducts = Category_Product::whereIn('category_id', $categoryIds)->pluck('product_id');
 
-            // الحصول على المنتجات باستخدام معرفات الفئات
             $products = Product::whereIn('id', $categoryProducts)->get();
         } else {
             $products=Product::all();
@@ -51,7 +49,6 @@ class ProductController extends Controller
 
 
 
-    //  $user_id=Auth::user()->id;
     $product=Product::create([
 
         'title' => $request->title,
@@ -82,8 +79,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $categories=Category::all();
-        // return view('products.edit',['product'=>$product]);
-        return view('product.edit',['product'=>$product,'categories'=>$categories]);//طريقة ثانية باستخدام object
+        return view('product.edit',['product'=>$product,'categories'=>$categories]);
 
     }
 
@@ -131,11 +127,7 @@ public function restore($id){
     // dd($request->all());
     $product=Product::withTrashed()->findOrfail($id);
    $product->restore();
-    // $product2=Product::where('id', $id)->firstOrFail();
-    // $orders=$product->order()->get();
-    // foreach($orders as $order){
-    // $order->restore();
-//}
+
 
 return redirect(route('products.index'));
 
@@ -145,7 +137,6 @@ return redirect(route('products.index'));
     public function forceDelete( $id)
     {
         $product=Product::findOrfail($id);
-        // $product->order->forceDelete();
           $product->forceDelete();
 
        return redirect(route('products.index'));

@@ -28,13 +28,12 @@
                 @forelse($sales as $sale)
                     <tr>
                         <td>{{ $sale->id }}</td>
-                        <td>{{ $sale->product->title }}</td> <!-- Assuming 'product_name' is an attribute in Sale model -->
+                        <td>{{ $sale->product->title }}</td>
                         <td>{{ $sale->quantity }}</td>
                         <td>${{ number_format($sale->price, 2) }}</td>
                         <td>${{ number_format($sale->total, 2) }}</td>
                         <td>{{ $sale->created_at->format('Y-m-d') }}</td>
                         <td>{{ $sale->status }}</td>
-                         <!-- Assuming 'created_at' is available -->
                     </tr>
                 @empty
                     <tr>

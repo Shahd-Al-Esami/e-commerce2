@@ -47,13 +47,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        // Find the category by its ID
         $category = Category::findOrFail($id);
 
-        // Get all products related to this category
         $productRelations = $category->products;
 
-        // Loop through each product related to the category
         foreach ($productRelations as $productRelation) {
             // Check if the product has only this category
             if ($productRelation->categories()->count() == 1) {
@@ -65,7 +62,6 @@ class CategoryController extends Controller
             }
         }
 
-        // Now delete the category itself
         $category->delete();
 
         // Return a JSON response

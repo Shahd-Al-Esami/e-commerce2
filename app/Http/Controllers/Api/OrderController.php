@@ -62,57 +62,7 @@ class OrderController extends Controller
     }
 
 
-//     public function store(OrderRequest $request, $id)
-// {
-//     // Fetch the product by ID or return a 404 error if not found
-//     $product = Product::findOrFail($id);
 
-// if (!$product) {
-//     return response()->json(['message' => 'Product not found'], 404);
-// }
-//     // Check if the user is authenticated
-//     // if (!Auth::check()) {
-//     //     Log::info('User is not authenticated', ['user' => Auth::user()]);
-//     //     return response()->json(['message' => 'Unauthorized'], 401);
-//     // }
-
-//     // Get authenticated user's ID
-
-//     // Grab the quantity from the request
-//     $quantity = $request->input('quantity');
-
-//     // Validate that the quantity is a positive integer
-//     if ($quantity <= 0) {
-//         return response()->json(['message' => 'Quantity must be greater than zero.'], 400);
-//     }
-
-//     // Calculate total price
-//     $price = $product->price;
-//     $total = $price * $quantity;
-
-//     // Check for product stock availability
-//     if ($product->amount < $quantity) {
-//         return response()->json(['message' => 'Sorry, you can\'t order this amount; not enough stock.'], 400);
-//     }
-//     $user = auth()->user();
-
-//     // Create the new order
-//     $order = $user->orders->create([
-//         'product_id' => $id,
-//         'price' => $price,
-//         'quantity' => $quantity,
-//          'user_id' => $user->id,
-//         'total' => $total,
-//         'status' => 'inProgress',
-//         'paymentMethod' => $request->input('paymentMethod.0'),
-//     ]);
-
-//     // Reduce the product amount
-//     $product->decrement('amount', $quantity);
-
-//     // Return the created order as JSON with a 201 status
-//     return response()->json($order, 201);
-// }
 
     /**
      * Display the specified resource.

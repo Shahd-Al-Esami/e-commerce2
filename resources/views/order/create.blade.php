@@ -51,7 +51,6 @@
 <body>
 
 <div class="container">
-    {{-- <a class="btn btn-warning btn-sm m-5" href="{{ route('orders.index') }}" >go back</a> --}}
 
     <h1 class="text-center">Product Ordering</h1>
 
@@ -76,7 +75,6 @@
                     <select name="paymentMethod[]" id="paymentMethod"  required>
                         <option value="paypal">paypal</option>
                         <option value="creditCard">creditCard</option>
-                        {{-- <option value="inProgress">inProgress</option> --}}
                     </select>
                     <br>
                 <button class="btn btn-primary" >save order</button>

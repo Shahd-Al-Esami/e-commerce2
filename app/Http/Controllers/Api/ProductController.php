@@ -21,7 +21,6 @@ class ProductController extends Controller
         if ($search) {
             $categoryIds = Category::where('name', 'LIKE', '%' . $search . '%')->pluck('id');
 
-            // Get the products associated with those categories
             $categoryProducts = Category_Product::whereIn('category_id', $categoryIds)->pluck('product_id');
 
             // Get the products using the category IDs

@@ -74,32 +74,26 @@ class CategoryController extends Controller
 
 
         public function destroy($id)
-             {            // Find the category by its ID
+             {
             $category = Category::findOrFail($id);
 
             // Get all products related to this category
             $productRelations = $category->products;
 
-            // Loop through each product related to the category
             foreach ($productRelations as $productRelation) {
 
-                // Check if the product has only this category
                 if ($productRelation->categories()->count() == 1) {
 
                 $product=Product::findOrfail($productRelation->id);
                 $product->forceDelete();
 
-                    // If it has only this category, delete the product
                 } else {
-                    // If it has other categories, detach this category
                     $productRelation->categories()->detach($category->id);
                 }
             }
 
-            // Now delete the category itself
             $category->delete();
 
-            // Return a response (could be a redirect or JSON response)
             return redirect()->route('categories.index')->with('success', 'Category and related products deleted successfully');
           }
 

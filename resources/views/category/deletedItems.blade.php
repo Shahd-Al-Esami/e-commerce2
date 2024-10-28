@@ -36,7 +36,6 @@
  <p class="card-text">Deleted on: {{ $category->deleted_at->format('d M, Y H:i:s') }}</p>
  <a  href="{{ route('restore',$category->id) }}" class="btn btn-primary mt-3">Restore Category with posts</a>
 
- {{-- <a href="{{ route('forceDelete',$category->id) }}" class="btn btn-danger mt-3">Delete Permanently</a> --}}
  </div>
  </div>
  </div>

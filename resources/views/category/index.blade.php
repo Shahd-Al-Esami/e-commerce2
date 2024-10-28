@@ -13,7 +13,6 @@
             <h1 class="h3">category</h1>
             <a href="{{ route('categories.create') }}" class="btn btn-primary">Add New category</a>
             <a href="{{ url('/') }}" class="btn btn-primary border-black mt-5">back</a>
-            {{-- <a href="{{route('deletedItems') }}" class="btn btn-primary border-black mt-5">Show Deleted Items</a> --}}
 
 
 
@@ -35,12 +34,7 @@
                   @method('DELETE')
                   <button type="submit" style="background-color: red;border:none;" > delete</button>
               </form>
-{{--
-              <form method="POST" action="{{ route('forceDelete', $cats->id) }}">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-dark" type="submit">Force Delete</button>
-                </form> --}}
+
               </div>
             </div>
           </div>

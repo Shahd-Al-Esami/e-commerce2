@@ -36,7 +36,6 @@ class CheckUserApi
             }
         }
 
-        // If the route name does not match any defined routes
         return response()->json(['error' => 'Unauthorized action.'], Response::HTTP_UNAUTHORIZED);
     }
 }
