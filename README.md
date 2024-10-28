@@ -71,7 +71,7 @@ delete users
 # Installation
 ### Steps to Run the Project
 
-1. Clone the repository by commend :git clone  https://github.com/Shahd-Al-Esami/e-commerce.git 
+1. Clone the repository by commend :git clone https://github.com/Shahd-Al-Esami/e-commerce2.git
 2. Xampp start  with appach and mysql
 2. Create a database and ensure the connection is configured in the .env file.
 3. run commends : composer install & npm install
